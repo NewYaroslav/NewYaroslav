@@ -14,8 +14,11 @@ Designing systems, testing strategies, and trading with my own capital.
 
 ---
 
-## 🔧 Selected Projects
+## Some of My Projects
 
 - [`cryptox_cpp`](https://github.com/NewYaroslav/cryptox_cpp) — unified API for cryptocurrency exchanges  
 - [`DataFeedHub`](https://github.com/NewYaroslav/DataFeedHub) — storage and backtesting system for market data  
+
+## Hobby Projects
+
 - [`strange_pattern`](https://github.com/NewYaroslav/strange_pattern) — infinite pattern generator using coordinate-based primality checks, producing unique visual and audio patterns
