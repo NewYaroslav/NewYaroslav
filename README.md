@@ -14,18 +14,6 @@ Designing systems, testing strategies, and trading with my own capital.
 
 ---
 
-## 📈 GitHub Stats
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=NewYaroslav&show_icons=true&theme=dark&hide_title=true" alt="GitHub stats">
-</p>
-
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=NewYaroslav&layout=compact&theme=dark" alt="Top languages">
-</p>
-
----
-
 ## 🔧 Selected Projects
 
 - [`cryptox_cpp`](https://github.com/NewYaroslav/cryptox_cpp) — unified API for cryptocurrency exchanges  
