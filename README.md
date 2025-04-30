@@ -9,8 +9,8 @@ Designing systems, testing strategies, and trading with my own capital.
 
 🎯 Interests:
 - Philosophy
-- Music production
-- Game development (upcoming)
+- Hobbyist music composition
+- Game development (planned)
 
 ---
 
