@@ -30,8 +30,8 @@ jobs:
           plugin_languages_details: percentage, bytes-size
           plugin_followup: yes
           plugin_followup_sections: user
-      - uses: actions/upload-pages-artifact@v3
+      - uses: actions/upload-pages-artifact@v4
         with:
-          path: ./metrics_renders
+          path: /metrics_renders
       - uses: actions/deploy-pages@v4
         id: deployment
