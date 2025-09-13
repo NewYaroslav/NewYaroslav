@@ -14,6 +14,10 @@ Designing systems, testing strategies, and trading with my own capital.
 
 ---
 
+![Metrics](https://newyaroslav.github.io/NewYaroslav/metrics.svg)
+
+---
+
 ## Some of My Projects
 
 - [`ImGuiX`](https://github.com/NewYaroslav/ImGuiX) — extensions and utilities for Dear ImGui
