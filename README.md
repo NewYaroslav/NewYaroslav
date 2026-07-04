@@ -16,7 +16,6 @@ I design and build software around:
 * **C++ / C**
 * **MQL4 / MQL5 / MetaTrader**
 * **HTTP / WebSocket APIs**
-* **WinAPI / IPC**
 * **Dear ImGui / SFML / GLFW / SDL2**
 
 
