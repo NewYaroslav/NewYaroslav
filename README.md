@@ -1,6 +1,6 @@
 ## Aster Seker (Yaroslav B.)
 
-C++ developer focused on applied systems, trading infrastructure, desktop tools, and integrations.
+Headline: C++ Developer · Trading Infrastructure · Desktop Tools · MetaTrader
 
 I design and build software around:
 
