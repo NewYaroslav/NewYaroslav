@@ -1,37 +1,46 @@
-## Aster Seker (Yaroslav B.)
+## Aster Seker
 
-Headline: C++ Developer · Trading Infrastructure · Desktop Tools · MetaTrader
+**C++ Developer · Trading Systems · Market Data · Desktop Tools**
 
-I design and build software around:
+I design and build software for:
 
 * market data and trading infrastructure
-* broker/exchange APIs
+* broker and exchange APIs
 * MetaTrader integrations
 * local storage and embedded databases
 * desktop GUI tools
 * automation workflows
 
-💻 **Tech stack:**
+### Current focus
+
+* C++ libraries for local data storage and desktop tools
+* Market data infrastructure and backtesting
+* Trading system components and exchange/broker integrations
+
+💻 **Tech stack**
 
 * **C++ / C**
 * **MQL4 / MQL5 / MetaTrader**
 * **HTTP / WebSocket APIs**
+* **SQLite / libmdbx**
 * **Dear ImGui / SFML / GLFW / SDL2**
-
 
 🛠 **Additional experience**
 
-* **Python** — Telegram bots, automation, parsers, API integrations
+* **Rust** — short-term commercial experience with trading infrastructure and backtesting
+* **Python** — Telegram bots, automation, parsers, account monitoring, API integrations
+* **TypeScript / JavaScript / HTML / CSS** — browser extensions, web interface automation, Solana Web3 tooling
 * **Java / Android** — tools for embedded devices
-* **JavaScript / HTML / CSS** — browser extensions and web interface automation
-* **Rust** — short-term commercial experience in a trading project
 * **Embedded** — STM32, ESP32, Nordic chips, basic Altium Designer experience
+* **CAD / Prototyping** — basic SolidWorks, mechanical prototyping
 
 🎯 **Interests**
 
 * Applied engineering
 * Trading systems and market data
 * Developer tools
+* Desktop software
+* Hardware prototyping and 3D printing
 * Philosophy
 * Music making
 
@@ -52,8 +61,8 @@ I design and build software around:
 
 ### Trading infrastructure and market data
 
-* [`DataFeedHub`](https://github.com/NewYaroslav/DataFeedHub) — system for storing, processing, and testing market data: quotes, funding rates, order books, historical backtesting, and real-time feeds.
-* [`optionx_cpp`](https://github.com/NewYaroslav/optionx_cpp) — C++ library for broker/trading platform API integrations.
+* [`DataFeedHub`](https://github.com/NewYaroslav/DataFeedHub) — system for storing, processing, and testing market data: quotes, funding rates, order books, historical backtesting, and real-time feeds. **Currently in active development.**
+* [`optionx_cpp`](https://github.com/NewYaroslav/optionx_cpp) — C++ library for broker and trading platform API integrations.
 
 ### Telegram bots and automation
 
