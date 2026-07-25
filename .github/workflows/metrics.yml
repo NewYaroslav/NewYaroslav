@@ -11,6 +11,7 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     permissions:
+      contents: read
       pages: write
       id-token: write
       # contents: read  # (не обязательно, если не делаешь checkout)
@@ -19,17 +20,20 @@ jobs:
         with:
           filename: metrics.svg
           token: ${{ secrets.METRICS_TOKEN }}
+          user: LimiNode
           output_action: none
           config_timezone: UTC
           base: header, repositories, metadata
           plugin_lines: yes
-          plugin_lines_history_limit: 1
+          plugin_lines_history_limit: 10
           plugin_lines_sections: base
           plugin_lines_delay: 30
           plugin_languages: yes
           plugin_languages_details: percentage, bytes-size
           plugin_followup: yes
           plugin_followup_sections: user
+          repositories: 300
+          repositories_batch: 100
       - uses: actions/upload-pages-artifact@v4
         with:
           path: /metrics_renders
