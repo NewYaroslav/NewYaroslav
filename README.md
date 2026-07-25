@@ -1,48 +1,20 @@
 ## LimiNode
 
-**C++ Developer · Trading Systems · Market Data · Desktop Tools**
+**C++ Developer · Trading Infrastructure · Market Data · Desktop Tools**
 
-I design and build software for:
+I build C++ software for trading infrastructure, market data, broker/exchange APIs, MetaTrader integrations, local storage, and desktop tooling.
 
-* market data and trading infrastructure
-* broker and exchange APIs
-* MetaTrader integrations
-* local storage and embedded databases
-* desktop GUI tools
-* automation workflows
+### Focus
 
-### Current focus
+- C++ libraries for local data storage and desktop tools
+- Market data infrastructure, backtesting, and broker integrations
+- Automation workflows around trading systems
 
-* C++ libraries for local data storage and desktop tools
-* Market data infrastructure and backtesting
-* Trading system components and exchange/broker integrations
+### Stack
 
-💻 **Tech stack**
+**C++17 / C · MQL4 / MQL5 · Python · HTTP/WebSocket · SQLite/libmdbx · Dear ImGui · CMake**
 
-* **C++ / C**
-* **MQL4 / MQL5 / MetaTrader**
-* **HTTP / WebSocket APIs**
-* **SQLite / libmdbx**
-* **Dear ImGui / SFML / GLFW / SDL2**
-
-🛠 **Additional experience**
-
-* **Rust** — short-term commercial experience with trading infrastructure and backtesting
-* **Python** — Telegram bots, automation, parsers, account monitoring, API integrations
-* **TypeScript / JavaScript / HTML / CSS** — browser extensions, web interface automation, Solana Web3 tooling
-* **Java / Android** — tools for embedded devices
-* **Embedded** — STM32, ESP32, Nordic chips, basic Altium Designer experience
-* **CAD / Prototyping** — basic SolidWorks, mechanical prototyping
-
-🎯 **Interests**
-
-* Applied engineering
-* Trading systems and market data
-* Developer tools
-* Desktop software
-* Hardware prototyping and 3D printing
-* Philosophy
-* Music making
+Additional experience: Rust, TypeScript/JavaScript, Java/Android, embedded systems, CAD/prototyping.
 
 ---
 
