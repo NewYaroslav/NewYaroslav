@@ -46,7 +46,7 @@ I design and build software for:
 
 ---
 
-![Metrics](https://liminode.github.io/LimiNode/metrics.svg)
+![Metrics](https://liminode.github.io/LimiNode/metrics.svg?v=2)
 
 ---
 
