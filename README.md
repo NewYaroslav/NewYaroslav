@@ -46,7 +46,7 @@ I design and build software for:
 
 ---
 
-![Metrics](https://newyaroslav.github.io/NewYaroslav/metrics.svg)
+![Metrics](https://liminode.github.io/LimiNode/metrics.svg)
 
 ---
 
