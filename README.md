@@ -1,4 +1,4 @@
-## Aster Seker
+## LimiNode
 
 **C++ Developer · Trading Systems · Market Data · Desktop Tools**
 
