@@ -80,6 +80,6 @@ jobs:
             fs.writeFileSync("/metrics_renders/metrics.svg", svg);
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: /metrics_renders
+          path: ${{ github.workspace }}/metrics_renders
       - uses: actions/deploy-pages@v4
         id: deployment
