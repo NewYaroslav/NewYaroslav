@@ -73,26 +73,28 @@ jobs:
             } while (cursor);
             const topLanguages = [...languages.entries()]
               .sort(([, left], [, right]) => right.size - left.size)
-              .slice(0, 6);
+              .slice(0, 8);
             const languageTotal = [...languages.values()].reduce((sum, language) => sum + language.size, 0) || 1;
             let barOffset = 30;
             const languageBar = topLanguages.map(([name, language]) => {
               const width = 420 * language.size / languageTotal;
-              const segment = `<rect x="${barOffset.toFixed(1)}" y="194" width="${width.toFixed(1)}" height="8" fill="${escape(language.color)}"/>`;
+              const segment = `<rect x="${barOffset.toFixed(1)}" y="165" width="${width.toFixed(1)}" height="8" fill="${escape(language.color)}"/>`;
               barOffset += width;
               return segment;
             }).join("");
             const otherWidth = Math.max(0, 450 - barOffset);
-            const languageOther = otherWidth > 0.5 ? `<rect x="${barOffset.toFixed(1)}" y="194" width="${otherWidth.toFixed(1)}" height="8" fill="#e1e4e8"/>` : "";
+            const languageOther = otherWidth > 0.5 ? `<rect x="${barOffset.toFixed(1)}" y="165" width="${otherWidth.toFixed(1)}" height="8" fill="#e1e4e8"/>` : "";
             const rows = topLanguages.map(([name, language], index) => {
               const x = index % 2 ? 250 : 30;
-              const y = 235 + Math.floor(index / 2) * 28;
+              const y = 206 + Math.floor(index / 2) * 28;
               const percentage = 100 * language.size / languageTotal;
               return `<circle cx="${x}" cy="${y - 5}" r="5" fill="${escape(language.color)}"/><text x="${x + 13}" y="${y}" class="language">${escape(name)}</text><text x="${x + 190}" y="${y}" class="percentage">${percentage.toFixed(1)}%</text>`;
             }).join("");
-            const height = 360;
+            const additionalLanguages = ["HTML", "CSS"].filter((name) => languages.has(name));
+            const additional = additionalLanguages.length ? `<text x="240" y="322" class="extra" text-anchor="middle">Also used: ${additionalLanguages.map(escape).join(" · ")}</text>` : "";
+            const height = 370;
             const updated = new Date().toISOString().replace("T", " ").replace(/\.\d{3}Z$/, " UTC");
-            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="${height}" viewBox="0 0 480 ${height}" role="img" aria-label="LimiNode GitHub statistics"><style>text{font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Helvetica,Arial,sans-serif;fill:#777}.title{font-size:20px;font-weight:700;fill:#0366d6}.heading{font-size:16px;fill:#0366d6}.metric{font-size:14px}.number{font-size:18px;font-weight:500;fill:#0366d6}.language{font-size:14px;fill:#555}.percentage{font-size:12px;fill:#777;text-anchor:end}.footer{font-size:10px;font-style:italic;fill:#666}</style><text x="20" y="31" class="title">LimiNode</text><text x="20" y="65" class="metric">Joined GitHub <tspan class="number">${joinedYears}</tspan><tspan> years ago</tspan></text><text x="20" y="91" class="metric"><tspan class="number">${formatNumber.format(totalRepositories)}</tspan><tspan dx="5">Repositories</tspan></text><text x="20" y="117" class="metric"><tspan class="number">${formatNumber.format(stars)}</tspan><tspan dx="5">Stargazers</tspan></text><text x="20" y="143" class="metric"><tspan class="number">${formatNumber.format(forks)}</tspan><tspan dx="5">Forkers</tspan></text><text x="250" y="65" class="metric">Contributed to <tspan class="number">${formatNumber.format(contributedRepositories)}</tspan><tspan> repositories</tspan></text><text x="250" y="91" class="metric"><tspan class="number">${formatNumber.format(mergedPullRequests)}</tspan><tspan dx="5">Merged pull requests</tspan></text><text x="250" y="117" class="metric"><tspan class="number">${formatNumber.format(watchers)}</tspan><tspan dx="5">Watchers</tspan></text><text x="250" y="143" class="metric"><tspan class="number">${formatNumber.format(followers)}</tspan><tspan dx="5">Followers</tspan></text><text x="240" y="174" class="heading" text-anchor="middle">Most used languages</text><rect x="30" y="194" width="420" height="8" rx="4" fill="#e1e4e8"/>${languageBar}${languageOther}${rows}<text x="240" y="342" class="footer" text-anchor="middle">Updated ${updated} · generated from GitHub GraphQL</text></svg>`;
+            const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="480" height="${height}" viewBox="0 0 480 ${height}" role="img" aria-label="LimiNode GitHub statistics"><style>text{font-family:-apple-system,BlinkMacSystemFont,&apos;Segoe UI&apos;,Helvetica,Arial,sans-serif;fill:#777}.heading{font-size:16px;fill:#0366d6}.metric{font-size:14px}.number{font-size:18px;font-weight:500;fill:#0366d6}.language{font-size:14px;fill:#555}.percentage{font-size:12px;fill:#777;text-anchor:end}.extra{font-size:12px;fill:#777}.footer{font-size:10px;font-style:italic;fill:#666}</style><text x="20" y="34" class="metric">Joined GitHub <tspan class="number">${joinedYears}</tspan><tspan> years ago</tspan></text><text x="20" y="60" class="metric"><tspan class="number">${formatNumber.format(totalRepositories)}</tspan><tspan dx="5">Repositories</tspan></text><text x="20" y="86" class="metric"><tspan class="number">${formatNumber.format(stars)}</tspan><tspan dx="5">Stargazers</tspan></text><text x="20" y="112" class="metric"><tspan class="number">${formatNumber.format(forks)}</tspan><tspan dx="5">Forkers</tspan></text><text x="250" y="34" class="metric">Contributed to <tspan class="number">${formatNumber.format(contributedRepositories)}</tspan><tspan> repositories</tspan></text><text x="250" y="60" class="metric"><tspan class="number">${formatNumber.format(mergedPullRequests)}</tspan><tspan dx="5">Merged pull requests</tspan></text><text x="250" y="86" class="metric"><tspan class="number">${formatNumber.format(watchers)}</tspan><tspan dx="5">Watchers</tspan></text><text x="250" y="112" class="metric"><tspan class="number">${formatNumber.format(followers)}</tspan><tspan dx="5">Followers</tspan></text><text x="240" y="145" class="heading" text-anchor="middle">Most used languages</text><rect x="30" y="165" width="420" height="8" rx="4" fill="#e1e4e8"/>${languageBar}${languageOther}${rows}${additional}<text x="240" y="352" class="footer" text-anchor="middle">Updated ${updated} · generated from GitHub GraphQL</text></svg>`;
             const outputDirectory = `${process.cwd()}/metrics_renders`;
             fs.mkdirSync(outputDirectory, { recursive: true });
             fs.writeFileSync(`${outputDirectory}/metrics.svg`, svg);
