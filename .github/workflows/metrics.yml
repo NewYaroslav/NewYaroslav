@@ -25,7 +25,9 @@ jobs:
             const query = `
               query($login: String!, $cursor: String) {
                 user(login: $login) {
-                  createdAt`n                  followers { totalCount }`n                  repositoriesContributedTo(includeUserRepositories: true) { totalCount }
+                  createdAt
+                  followers { totalCount }
+                  repositoriesContributedTo(includeUserRepositories: true) { totalCount }
                   repositories(first: 100, after: $cursor, isFork: false, orderBy: {field: UPDATED_AT, direction: DESC}) {
                     totalCount
                     pageInfo { hasNextPage endCursor }
@@ -42,7 +44,10 @@ jobs:
               }`;
             let cursor = null;
             let totalRepositories = 0;
-            let followers = 0;`n            let joinedYears = 0;`n            let contributedRepositories = 0;`n            const { search: { issueCount: mergedPullRequests } } = await github.graphql(`query { search(query: "author:LimiNode is:pr is:merged", type: ISSUE, first: 1) { issueCount } }`);
+            let followers = 0;
+            let joinedYears = 0;
+            let contributedRepositories = 0;
+            const { search: { issueCount: mergedPullRequests } } = await github.graphql(`query { search(query: "author:LimiNode is:pr is:merged", type: ISSUE, first: 1) { issueCount } }`);
             let stars = 0;
             let forks = 0;
             let watchers = 0;
@@ -51,7 +56,9 @@ jobs:
               const { user } = await github.graphql(query, { login: "LimiNode", cursor });
               const repositories = user.repositories;
               totalRepositories = repositories.totalCount;
-              followers = user.followers.totalCount;`n              joinedYears = Math.floor((Date.now() - Date.parse(user.createdAt)) / (365.2425 * 24 * 60 * 60 * 1000));`n              contributedRepositories = user.repositoriesContributedTo.totalCount;
+              followers = user.followers.totalCount;
+              joinedYears = Math.floor((Date.now() - Date.parse(user.createdAt)) / (365.2425 * 24 * 60 * 60 * 1000));
+              contributedRepositories = user.repositoriesContributedTo.totalCount;
               for (const repository of repositories.nodes) {
                 stars += repository.stargazers.totalCount;
                 forks += repository.forkCount;
