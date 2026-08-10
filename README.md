@@ -18,7 +18,7 @@ Additional experience: Rust, TypeScript/JavaScript, Java/Android, embedded syste
 
 ---
 
-![Metrics](https://liminode.github.io/LimiNode/metrics.svg?v=4)
+![Metrics](https://liminode.github.io/LimiNode/metrics.svg?v=5)
 
 ---
 
